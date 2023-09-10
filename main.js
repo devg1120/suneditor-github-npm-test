@@ -4,6 +4,7 @@ import 'suneditor/dist/suneditor.css'
 import suneditor from 'suneditor'
 import plugins from 'suneditor/src/plugins'
 
+
 let data1 = `
 <h1><span style="color: rgb(255, 0, 0)">Hi</span></h1><h3>H3</h3><p><br></p><p><br></p><p>関西システム　　<span style="font-size: 18px;background-color: rgb(209, 178, 255)">機内</span></p><p><span style="font-size: 18px;background-color: rgb(209, 178, 255)"><br></span></p><p><span style="font-size: 18px;background-color: rgb(209, 178, 255)"><br></span></p><p><br></p>
 `;
@@ -17,7 +18,7 @@ ta.value = data2;
 
 
 let editor = suneditor.create('textarea', {
-    //plugins: plugins,
+    plugins: plugins,
     buttonList: [
         ['undo', 'redo'],
         ['font', 'fontSize', 'formatBlock'],
@@ -33,7 +34,7 @@ let editor = suneditor.create('textarea', {
         ['preview', 'print'],
         ['save', 'template'],
     ],
-    resizingBar : true,
+    resizingBar : false,
     showPathLabel: false,
     resizeEnable: true,
 })
